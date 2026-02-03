@@ -4,6 +4,9 @@ pipeline {
         DOCKERHUB_CRED = credentials('dockerhubid')
         IMAGE_NAME = "1ms24mc049/dev"
     }
+triggers{
+    cron('* * * * *')
+}
     
     stages {
         stage('checkout') {
